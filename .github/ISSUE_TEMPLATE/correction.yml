@@ -1,0 +1,17 @@
+name: Correct an entry
+description: Report a factual error, overclaim, outdated release status, or broken link.
+title: "[Correction] "
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Affected entry or file
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correction and supporting evidence
+      description: Explain the change and provide a primary source or reproducible link failure.
+    validations:
+      required: true

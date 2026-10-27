@@ -1,0 +1,27 @@
+name: Validate collection
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  local-links-and-citations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Check public files and history
+        run: python3 scripts/check_public_files.py --history
+      - name: Check evidence catalog and graph
+        run: python3 scripts/validate_catalog.py
+      - name: Check generated collection and atlas
+        run: |
+          python3 scripts/build_collection.py --check
+          python3 scripts/build_atlas.py --check
+      - name: Check local links and bibliography
+        run: python3 scripts/check_links.py

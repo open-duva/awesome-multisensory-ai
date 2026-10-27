@@ -1,0 +1,39 @@
+name: Suggest research resource
+description: Propose an evidence-based paper, dataset, benchmark, or tool.
+title: "[Resource] "
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Resource type
+      options:
+        - Paper
+        - Dataset
+        - Benchmark
+        - Tool
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Name and primary-source URL
+      description: Use the original paper, proceedings, dataset, or maintainer repository.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Relevance and evidence
+      description: Include status/version, sensors, input granularity, method, demonstrated capability, ground-truth source, tested generalization, baselines, and one limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: access
+    attributes:
+      label: Code, weights, data, and access conditions
+      description: Distinguish verified releases from planned or unverified availability.
+  - type: input
+    id: affiliation
+    attributes:
+      label: Your connection to the resource
+      description: Author or institutional involvement is welcome; please disclose it.
