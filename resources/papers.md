@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research Map](../atlas/dist/index.html) · [BibTeX](../references.bib)
 
-**53 core papers and 37 background references.** Additional references are listed separately in the [watchlist](watchlist.md).
+**54 core papers and 37 background references.** Additional references are listed separately in the [watchlist](watchlist.md).
 
 Publication status is separate from the source milestone used in the timeline. Claims are tied to the primary methods/evaluation locations in each entry. BibTeX cites the reviewed record; use a publisher citation when required. A public code link is not a guarantee of complete training-data or weight availability.
 
@@ -96,5 +96,6 @@ Publication status is separate from the source milestone used in the timeline. C
 | [AnyTouch 2](../topics/sensor-representations.md#anytouch-2) | Selected core | Sensor representation and pretraining | [ICLR 2026](https://arxiv.org/abs/2602.09617) | [2026-02-10](https://arxiv.org/abs/2602.09617) |
 | [SenTSR-Bench](../topics/datasets-and-benchmarks.md#sentsr-bench) | Selected core | Datasets and evaluation contributions | [AISTATS 2026](https://proceedings.mlr.press/v300/he26c.html) | [2026-02-23](https://arxiv.org/abs/2602.19455) |
 | [CSFM](../topics/sensor-representations.md#csfm) | Selected core | Sensor representation and pretraining | [Nature Machine Intelligence 2026](https://www.nature.com/articles/s42256-026-01180-5) | [2026-02-24](https://www.nature.com/articles/s42256-026-01180-5) |
+| [LingBot-Touch](../topics/sensor-representations.md#lingbot-touch) | Selected core | Sensor representation and pretraining | [November 2026 arXiv preprint; no peer-reviewed acceptance verified](https://arxiv.org/abs/2611.12806) | [2026-11-09](https://arxiv.org/abs/2611.12806) |
 | [LanguageBind](../topics/background.md#languagebind) | Background | Background and technical context | [ICLR 2024 (per arXiv comments)](https://arxiv.org/abs/2310.01852) | [2023-10-03](https://arxiv.org/abs/2310.01852) |
 | [Meta-Transformer](../topics/background.md#meta-transformer) | Background | Background and technical context | [Preprint; venue not verified](https://arxiv.org/abs/2307.10802) | [2023-07-20](https://arxiv.org/abs/2307.10802) |

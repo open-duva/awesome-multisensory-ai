@@ -2,7 +2,7 @@
 
 [Home](../README.md) · [Research Map](../atlas/dist/index.html) · [Paper index](../resources/papers.md)
 
-Executed control, open-loop planning, and prediction remain distinct claims. The selected notes identify the actual measured outcome and sensor ablations.
+Executed control, open-loop planning, and prediction remain distinct claims. The selected notes identify the actual measured outcome and sensor ablations. See also [LingBot-Touch](sensor-representations.md#lingbot-touch) in representations for frozen-encoder policy evaluations with staged task scoring.
 
 7 curated entries. Generated from the reviewed catalog; edit the source record and rebuild rather than changing this page alone.
 

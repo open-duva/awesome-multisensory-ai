@@ -4,7 +4,7 @@
 
 Reusable encoders, calibrated input assumptions, and the boundary between within-family transfer and universal sensor representations.
 
-20 curated entries. Generated from the reviewed catalog; edit the source record and rebuild rather than changing this page alone.
+21 curated entries. Generated from the reviewed catalog; edit the source record and rebuild rather than changing this page alone.
 
 <!-- paper:limu-bert -->
 
@@ -405,3 +405,23 @@ Xiao Gu et al. · Nature Machine Intelligence 2026. [Status source](https://www.
 - **Access:** Official implementation linked; weights and dataset permissions require separate checks.
 
 **Evidence locations:** [Results; Methods; Discussion](https://www.nature.com/articles/s42256-026-01180-5) · [Download the Pretrained Model Weights](https://github.com/guxiao0822/Cardiac-Sensing-FM) · [Author metadata](https://api.crossref.org/works/10.1038%2Fs42256-026-01180-5)
+
+<!-- paper:lingbot-touch -->
+
+### LingBot-Touch
+
+**[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](https://arxiv.org/abs/2611.12806)**
+
+Han, Bing et al. · November 2026 arXiv preprint; no peer-reviewed acceptance verified. [Status source](https://arxiv.org/abs/2611.12806) · [Official inference code](https://github.com/Robbyant/lingbot-touch)
+
+- **Contribution:** A shared tactile encoder spans three sensing principles and transfers frozen features to an unseen hand sensor, with downstream policy evaluations.
+- **Measurements and method:** Decoded tactile measurement sequences and known 3D taxel coordinates; scalar optical deformation/intensity or pressure responses and three-axis magnetic signals, not raw RGB images. Canonical fingertip geometry, modality-specific tokenizers, a shared Haptic Transformer with time/finger/XYZ positions, and JEPA latent prediction. Tiny and Small encoders have 5.46M and 21.76M parameters.
+- **Supervision:** Self-supervised pretraining on 4,983 hours from tactile gloves and teleoperated hands; frozen encoders with separately trained attentive probes and downstream policies.
+- **Demonstrated capability:** Five probing tasks on Sharpa Wave and XHand1; four policy families across 26 real-robot tasks; 12 simulated RL tasks. Table 2 uses the 4K-hour Tiny encoder: task-averaged reported scores rise from 48.1% to 69.9% for pi0.5 and 48.3% to 73.1% for LingBot-VLA. These include partial-credit scoring, not simply whole-task completion rates.
+- **Reference / ground truth:** Sensor-derived force, contact centers and coverage; synchronized video for retrieval; task-specific staged scores over 20 real-robot trials per task (Appendix B, Table 7); simulated episode criteria. Future-force probes also receive measured current/future joint positions and the last force magnitude.
+- **Generalization tested:** XHand1 sensor model is absent from pretraining; its magnetic sensing principle is represented. Geometry/signal adaptation is required, but tokenizer and encoder remain frozen. Probes/readouts and policies still train on target data; real-robot policies use 200 demonstrations per task or 500 for bimanual tasks.
+- **Baselines:** Original and raw-tactile policies; FTP-1 with fitted sensor-specific adapters; data/capacity-matched MAE and VAE; single-source versus mixed-source training; no/binary/raw tactile and jointly trained CNN observations in simulation.
+- **Boundary:** Two evaluated hand platforms; no capacitive pretraining and limited palm coverage. At a fixed 1,000-hour budget, single-source models win 7/8 corresponding physical-probe comparisons. Tiny retrieval degrades at 5K hours. Published results have not been independently reproduced in this collection.
+- **Access:** Apache-2.0 inference code, sensor adapters, sample clips, and [Tiny](https://huggingface.co/robbyant/lingbot-touch-tiny) / [Small](https://huggingface.co/robbyant/lingbot-touch-small) encoder weights. Public weight-file access verified on 2026-11-11; weights were not downloaded or executed. The approximately 5K-hour release does not include the full pretraining corpus, training pipeline or downstream policy/probe heads.
+
+**Evidence locations:** [Authors and v1 submission history](https://arxiv.org/abs/2611.12806) · [Sections 3-5; Figure 8; Tables 2, 6 and 7; limitations](https://arxiv.org/pdf/2611.12806v1) · [Official project and evaluation overview](https://technology.robbyant.com/lingbot-touch) · [Inference release, samples and Apache-2.0 license](https://github.com/Robbyant/lingbot-touch) · [Decoded inputs, canonical geometry and downstream integration](https://github.com/Robbyant/lingbot-touch/blob/main/DATA_INTERFACE_GUIDE.md) · [Tiny model card, configuration, weights and license](https://huggingface.co/robbyant/lingbot-touch-tiny) · [Small model card, configuration, weights and license](https://huggingface.co/robbyant/lingbot-touch-small)

@@ -8,7 +8,7 @@
 > **Beyond vision: physical sensor signals as first-class modalities in multimodal AI.**
 > A curated collection of **sensor foundation models**, **multimodal alignment** methods, **physical state understanding**, **sensor-driven action**, and **datasets and benchmarks** for physiological signals (PPG, ECG, EEG, EMG, CGM), motion (IMU), touch and force, and radio-frequency sensing. Maintained by [DUVA Research](https://github.com/open-duva).
 
-**53 core selections · 37 background references**, plus a separate [further-reading list](resources/watchlist.md).
+**54 core selections · 37 background references**, plus a separate [further-reading list](resources/watchlist.md).
 
 <a href="https://open-duva.github.io/awesome-multisensory-ai/"><img src="atlas/assets/research-map.png" alt="Interactive research map of multisensory AI papers: a timeline of sensor foundation models from 2018 to 2026 with modality tags" width="100%"></a>
 
@@ -49,7 +49,7 @@ Detailed entries distinguish raw samples, processed waveforms, derived features,
 | How do raw signals become reusable representations? | [PaPaGei](topics/sensor-representations.md#papagei), [ECG-FM](topics/sensor-representations.md#ecg-fm), [BIOT](topics/sensor-representations.md#biot) | Physical-domain encoders, explicit adaptation protocols, and open implementations. |
 | What changes beyond short physiological windows? | [SleepFM clinical](topics/sensor-representations.md#sleepfm-clinical), [GluFormer](topics/sensor-representations.md#gluformer) | Multichannel sleep and glucose trajectories, with distinct external-cohort and device-transfer evidence. |
 | How do sensors connect to language? | [ImageBind](topics/multimodal-integration.md#imagebind), [SensorLM](topics/multimodal-integration.md#sensorlm), [OpenTSLM](topics/multimodal-integration.md#opentslm) | Different integration routes; semantic alignment and physical inference remain separate claims. |
-| What does touch measure beyond appearance? | [Sparsh-X](topics/sensor-representations.md#sparsh-x), [GenForce](topics/physical-understanding.md#genforce) | Multiple contact channels and cross-technology force calibration. |
+| What does touch measure beyond appearance? | [Sparsh-X](topics/sensor-representations.md#sparsh-x), [LingBot-Touch](topics/sensor-representations.md#lingbot-touch) (preprint), [GenForce](topics/physical-understanding.md#genforce) | Multiple contact channels, cross-sensor representations, and force calibration. |
 | Does another sensor improve executed behavior? | [FoAR](topics/dynamics-and-action.md#foar), [3D-ViTac](topics/dynamics-and-action.md#3d-vitac), [Generic neuromotor interface](topics/dynamics-and-action.md#generic-neuromotor-interface) | Force and tactile feedback and EMG-driven interaction with explicit outcome boundaries. |
 | Where does the approach fail? | [SensorBench](topics/datasets-and-benchmarks.md#sensorbench), [EEG-FM-Compass](topics/datasets-and-benchmarks.md#eeg-fm-compass), [PPG-Bench](resources/watchlist.md#ppg-bench) (preprint) | Executable quantitative tests and specialist controls. PPG-Bench is a recent preprint listed under further reading. |
 
@@ -57,7 +57,7 @@ Detailed entries distinguish raw samples, processed waveforms, derived features,
 
 | Research problem | Core entries | Entry point |
 | --- | ---: | --- |
-| Representation and pretraining | 20 | [Physiology, motion, and tactile encoders](topics/sensor-representations.md) |
+| Representation and pretraining | 21 | [Physiology, motion, and tactile encoders](topics/sensor-representations.md) |
 | Multimodal alignment and integration | 15 | [Sensor-language, vision, and RF interfaces](topics/multimodal-integration.md) |
 | Physical state understanding and reasoning | 5 | [State estimation, calibrated force, and tools](topics/physical-understanding.md) |
 | Dynamics and action | 7 | [Feedback, policies, and qualified world-model planning](topics/dynamics-and-action.md) |

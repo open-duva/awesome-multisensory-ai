@@ -412,6 +412,17 @@
       "evidence_url": "https://arxiv.org/html/2502.15637v2",
       "evidence_section": "Section 3.3 and Appendix B.1",
       "variant_scope": "2026 synthetic-pretraining variants"
+    },
+    {
+      "source": "v-jepa",
+      "target": "lingbot-touch",
+      "type": "method",
+      "relation": "evaluation_protocol_reuse",
+      "label": "Evaluation protocol reuse",
+      "explanation": "Explicitly follows the V-JEPA frozen-encoder evaluation protocol, fitting attentive probes on frozen EMA target-encoder features. This records protocol reuse, not reuse of V-JEPA weights or data.",
+      "evidence_url": "https://arxiv.org/pdf/2611.12806v1",
+      "evidence_section": "Section 4.1, Protocol; reference 4",
+      "variant_scope": "Frozen-encoder probing"
     }
   ]
 }

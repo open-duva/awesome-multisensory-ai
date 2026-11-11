@@ -4,7 +4,7 @@
 
 ## Author-linked implementation entry points
 
-**84 author-linked code entry points** for curated core/background records. Public visibility, source-code license, pretrained weights, and complete reproducibility are separate claims. Several projects are archived or have restricted/incomplete releases.
+**85 author-linked code entry points** for curated core/background records. Public visibility, source-code license, pretrained weights, and complete reproducibility are separate claims. Several projects are archived or have restricted/incomplete releases.
 
 | Work | Role | Availability boundary |
 | --- | --- | --- |
@@ -92,6 +92,7 @@
 | [SenTSR-Bench](https://github.com/amazon-science/SenTSR-Bench) | Selected | Official implementation linked; weights and dataset permissions require separate checks. |
 | [CSFM](https://github.com/guxiao0822/Cardiac-Sensing-FM) | Selected | Official implementation linked; weights and dataset permissions require separate checks. Private CODE data limit full reproduction. Weights require a signed Academic Access Agreement. Synthesized waveforms are estimates, not replacement measurements. |
 | [PPG-Bench](https://github.com/mannas-ai/ppg-bench) | Selected | Official implementation linked; weights and dataset permissions require separate checks. |
+| [LingBot-Touch](https://github.com/Robbyant/lingbot-touch) | Selected | Apache-2.0 inference code, sensor adapters, sample clips and [Tiny](https://huggingface.co/robbyant/lingbot-touch-tiny) / [Small](https://huggingface.co/robbyant/lingbot-touch-small) encoder weights. Full pretraining data, training pipeline and downstream heads are not included; new sensors require geometry and signal adaptation. |
 
 ## Supporting toolkits
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_at": "2026-10-26",
+  "reviewed_at": "2026-11-11",
   "title": "Awesome Multisensory AI",
   "date_note": "Chronology uses each work’s verified public milestone (preprint, release, or publication), preserving date precision. It is not a claim of absolute priority; unresolved dates are labeled.",
   "papers": [
@@ -7637,6 +7637,96 @@
       "limitation": "Recent author-reported study; benchmark-based checkpoint selection and lack of a verified released checkpoint limit maturity.",
       "availability": "Original paper and detailed reproduction/ablation tables available; no official code/checkpoint link located in paper or targeted search.",
       "summary": "Two synthetic-pretrained amplitude/shape specialists distill into one dilated-convolution student."
+    },
+    {
+      "id": "lingbot-touch",
+      "short_name": "LingBot-Touch",
+      "title": "Learning Heterogeneous Tactile Representation for General Dexterous Manipulation",
+      "authors": [
+        "Han, Bing",
+        "Peng, Yichuan",
+        "Dong, Haoyu",
+        "Hu, Yuanmeng",
+        "Jia, Yongyi",
+        "Wang, Fangjing",
+        "Zheng, Kecheng",
+        "Zhang, Yiming",
+        "Zeng, Yanhong",
+        "Zhang, Xiaoqing",
+        "Song, Chen",
+        "Zou, Rundong",
+        "Dong, Anqi",
+        "Guan, Yuan",
+        "Cheng, Ka Leong",
+        "Zhu, Xing",
+        "Shen, Yujun",
+        "Xue, Nan",
+        "Ning, Wei"
+      ],
+      "authors_complete": true,
+      "date_precision": "day",
+      "date_basis": "Verified arXiv v1 submission date (UTC).",
+      "date_source": "https://arxiv.org/abs/2611.12806",
+      "timeline_date": "2026-11-09",
+      "year": 2026,
+      "citation_year": 2026,
+      "status": "November 2026 arXiv preprint; no peer-reviewed acceptance verified",
+      "status_source": "https://arxiv.org/abs/2611.12806",
+      "paper_url": "https://arxiv.org/abs/2611.12806",
+      "arxiv_id": "2611.12806",
+      "code_url": "https://github.com/Robbyant/lingbot-touch",
+      "code_label": "Official inference code",
+      "modalities": [
+        "magnetic touch",
+        "piezoresistive touch",
+        "visuotactile deformation"
+      ],
+      "domains": [
+        "robotics"
+      ],
+      "category": "representation",
+      "decision": "selected",
+      "featured": false,
+      "summary": "A shared tactile encoder spans three sensing principles and transfers frozen features to an unseen hand sensor, with downstream policy evaluations.",
+      "input_level": "Decoded tactile measurement sequences and known 3D taxel coordinates; scalar optical deformation/intensity or pressure responses and three-axis magnetic signals, not raw RGB images",
+      "method": "Canonical fingertip geometry, modality-specific tokenizers, a shared Haptic Transformer with time/finger/XYZ positions, and JEPA latent prediction. Tiny and Small encoders have 5.46M and 21.76M parameters.",
+      "supervision": "Self-supervised pretraining on 4,983 hours from tactile gloves and teleoperated hands; frozen encoders with separately trained attentive probes and downstream policies.",
+      "demonstrated": "Five probing tasks on Sharpa Wave and XHand1; four policy families across 26 real-robot tasks; 12 simulated RL tasks. Table 2 uses the 4K-hour Tiny encoder: task-averaged reported scores rise from 48.1% to 69.9% for pi0.5 and 48.3% to 73.1% for LingBot-VLA. These include partial-credit scoring, not simply whole-task completion rates.",
+      "ground_truth": "Sensor-derived force, contact centers and coverage; synchronized video for retrieval; task-specific staged scores over 20 real-robot trials per task (Appendix B, Table 7); simulated episode criteria. Future-force probes also receive measured current/future joint positions and the last force magnitude.",
+      "generalization": "XHand1 sensor model is absent from pretraining; its magnetic sensing principle is represented. Geometry/signal adaptation is required, but tokenizer and encoder remain frozen. Probes/readouts and policies still train on target data; real-robot policies use 200 demonstrations per task or 500 for bimanual tasks.",
+      "baselines": "Original and raw-tactile policies; FTP-1 with fitted sensor-specific adapters; data/capacity-matched MAE and VAE; single-source versus mixed-source training; no/binary/raw tactile and jointly trained CNN observations in simulation.",
+      "limitation": "Two evaluated hand platforms; no capacitive pretraining and limited palm coverage. At a fixed 1,000-hour budget, single-source models win 7/8 corresponding physical-probe comparisons. Tiny retrieval degrades at 5K hours. Published results have not been independently reproduced in this collection.",
+      "availability": "Apache-2.0 inference code, sensor adapters, sample clips, and [Tiny](https://huggingface.co/robbyant/lingbot-touch-tiny) / [Small](https://huggingface.co/robbyant/lingbot-touch-small) encoder weights. Public weight-file access verified on 2026-11-11; weights were not downloaded or executed. The approximately 5K-hour release does not include the full pretraining corpus, training pipeline or downstream policy/probe heads.",
+      "evidence_sources": [
+        {
+          "url": "https://arxiv.org/abs/2611.12806",
+          "section": "Authors and v1 submission history"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2611.12806v1",
+          "section": "Sections 3-5; Figure 8; Tables 2, 6 and 7; limitations"
+        },
+        {
+          "url": "https://technology.robbyant.com/lingbot-touch",
+          "section": "Official project and evaluation overview"
+        },
+        {
+          "url": "https://github.com/Robbyant/lingbot-touch",
+          "section": "Inference release, samples and Apache-2.0 license"
+        },
+        {
+          "url": "https://github.com/Robbyant/lingbot-touch/blob/main/DATA_INTERFACE_GUIDE.md",
+          "section": "Decoded inputs, canonical geometry and downstream integration"
+        },
+        {
+          "url": "https://huggingface.co/robbyant/lingbot-touch-tiny",
+          "section": "Tiny model card, configuration, weights and license"
+        },
+        {
+          "url": "https://huggingface.co/robbyant/lingbot-touch-small",
+          "section": "Small model card, configuration, weights and license"
+        }
+      ]
     },
     {
       "id": "hubert-ecg",

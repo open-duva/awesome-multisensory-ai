@@ -14,7 +14,7 @@ TOPICS = {
     'representation': ('sensor-representations', 'Sensor representation and pretraining', 'Reusable encoders, calibrated input assumptions, and the boundary between within-family transfer and universal sensor representations.'),
     'alignment': ('multimodal-integration', 'Multimodal alignment and integration', 'Ways to connect physical measurements to language and other modalities. Shared embeddings and fluent output do not by themselves establish physical-state accuracy.'),
     'understanding': ('physical-understanding', 'Physical state understanding and reasoning', 'Calibrated estimation, explicit sensor querying, and tool-based analysis. The reference measurement and the information available to the model matter as much as answer fluency.'),
-    'action': ('dynamics-and-action', 'Dynamics, world models and action', 'Executed control, open-loop planning, and prediction remain distinct claims. The selected notes identify the actual measured outcome and sensor ablations.'),
+    'action': ('dynamics-and-action', 'Dynamics, world models and action', 'Executed control, open-loop planning, and prediction remain distinct claims. The selected notes identify the actual measured outcome and sensor ablations. See also [LingBot-Touch](sensor-representations.md#lingbot-touch) in representations for frozen-encoder policy evaluations with staged task scoring.'),
     'resources': ('datasets-and-benchmarks', 'Datasets and evaluation contributions', 'Reusable data and independent evaluations earn a place alongside models. Oracle labels, noisy reference instruments, and inferred states are different evidence levels.'),
     'background': ('background', 'Background and technical context', 'Methodological controls, general time-series encoders, and documented ancestors. These are not counted as core multisensory contributions. See the [encoder comparison](../resources/encoder-comparison.md) for reusable methods and shared checkpoints.')}
 DECISION = {'selected': 'Selected core', 'background': 'Background', 'watch': 'Watchlist'}
@@ -143,7 +143,7 @@ Generated from `encoder_profile` and the evidence fields in the [catalog](../dat
         if p.get('arxiv_id'):
             version=re.search(re.escape(p['arxiv_id'])+r'(v\d+)',p['paper_url'])
             bib += [f"  eprint = {{{p['arxiv_id']}{version.group(1) if version else ''}}},",'  archivePrefix = {arXiv},']
-        bib += ['  note = {'+esc(p['status'])+'; curated sources checked '+catalog['reviewed_at']+'}', '}','']
+        bib += ['  note = {'+esc(p['status'])+'; collection snapshot '+catalog['reviewed_at']+'}', '}','']
     files['references.bib']='\n'.join(bib)
     return files
 
